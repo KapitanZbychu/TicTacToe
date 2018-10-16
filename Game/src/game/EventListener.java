@@ -24,16 +24,6 @@ public class EventListener implements GLEventListener {
     	gl.glClearColor(0,0,0,1);
     	gl.glClear(gl.GL_COLOR_BUFFER_BIT);
         
-        /*
-    	gl.glColor3f(0,0,1);
-    	gl.glBegin(gl.GL_QUADS);
-        	gl.glVertex2f(-50,-50);
-        	gl.glVertex2f(50,-50);
-        	gl.glVertex2f(50,50);
-        	gl.glVertex2f(-50,50);
-    	//
-    	gl.glEnd();*/
-        
         Graphics.drawSquare();
 	}
 

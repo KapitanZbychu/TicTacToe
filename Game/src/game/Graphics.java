@@ -13,6 +13,12 @@ public class Graphics {
       gl.glVertex2f( 10,10 );
       gl.glEnd();
       
+      //Bottom
+      gl.glBegin( GL2.GL_LINES );
+      gl.glVertex2f( -10,-10 );
+      gl.glVertex2f( 10,-10 );
+      gl.glEnd();
+      
       gl.glFlush();
     }
     
