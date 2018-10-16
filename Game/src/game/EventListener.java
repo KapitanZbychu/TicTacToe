@@ -17,7 +17,7 @@ public class EventListener implements GLEventListener {
 
 	@Override
 	public void display(GLAutoDrawable drawable) {
-    	GL2 gl = drawable.getGL().getGL2();
+    	/*GL2 gl = drawable.getGL().getGL2();
     	gl.glClearColor(0,0,0,1);
     	gl.glClear(gl.GL_COLOR_BUFFER_BIT);
     	gl.glColor3f(0,0,1);
@@ -27,7 +27,9 @@ public class EventListener implements GLEventListener {
         	gl.glVertex2f(50,50);
         	gl.glVertex2f(-50,50);
     	//
-    	gl.glEnd();
+    	gl.glEnd();*/
+        
+        Graphics.drawSquare(drawable);
 	}
 
 	@Override
