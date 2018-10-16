@@ -56,4 +56,27 @@ public class Graphics {
         gl.glVertex2f(20,80);
         gl.glEnd();*/
     }
+    
+    public static void drawX(int d, int x, int y) {
+      GL2 gl = EventListener.gl;
+      
+      //
+      gl.glBegin( GL2.GL_LINES );
+      gl.glVertex2f( x,y );
+      gl.glVertex2f( x+d,y-d);
+      gl.glEnd();
+      
+      //Bottom
+      gl.glBegin( GL2.GL_LINES );
+      gl.glVertex2f( x+d,y );
+      gl.glVertex2f( x, y-d );
+      gl.glEnd();
+      
+    
+      gl.glFlush();
+      
+      
+    }
+
 }
+
