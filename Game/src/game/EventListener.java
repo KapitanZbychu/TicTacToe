@@ -6,6 +6,9 @@ import com.jogamp.opengl.GLEventListener;
 import static com.jogamp.opengl.GLProfile.GL2;
 
 public class EventListener implements GLEventListener {
+    
+        public static GL2 gl = null;
+        
 	@Override
 	public void init(GLAutoDrawable drawable) {
   	System.out.println("Hello");
@@ -17,9 +20,11 @@ public class EventListener implements GLEventListener {
 
 	@Override
 	public void display(GLAutoDrawable drawable) {
-    	/*GL2 gl = drawable.getGL().getGL2();
+    	gl = drawable.getGL().getGL2();
     	gl.glClearColor(0,0,0,1);
     	gl.glClear(gl.GL_COLOR_BUFFER_BIT);
+        
+        /*
     	gl.glColor3f(0,0,1);
     	gl.glBegin(gl.GL_QUADS);
         	gl.glVertex2f(-50,-50);
@@ -29,7 +34,7 @@ public class EventListener implements GLEventListener {
     	//
     	gl.glEnd();*/
         
-        Graphics.drawSquare(drawable);
+        Graphics.drawSquare();
 	}
 
 	@Override
