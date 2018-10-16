@@ -11,7 +11,7 @@ public class EventListener implements GLEventListener {
         
 	@Override
 	public void init(GLAutoDrawable drawable) {
-  	System.out.println("Hello");
+ 
 	}
 
 	@Override
@@ -25,10 +25,11 @@ public class EventListener implements GLEventListener {
     	gl.glClear(gl.GL_COLOR_BUFFER_BIT);
         
         Graphics.drawSquare(20, -40, 30);
-        //Graphics.drawX(100, 150, 10);
+        Graphics.drawX(20, -190, 190);
         Graphics.drawO(20, -40, 30);
-        Graphics.drawNet(50,10,10);
-	}
+        Graphics.drawX((Constants.window_width - 2*Constants.border)/3, -Constants.window_width/2 + Constants.border, Constants.window_height/2 - Constants.border);
+        Graphics.drawNet(Constants.window_width - 2*Constants.border, -Constants.window_width/2 + Constants.border, Constants.window_height/2 - Constants.border);
+        }
 
 	@Override
 	public void reshape(GLAutoDrawable drawable, int x, int y, int width, int hight) {
