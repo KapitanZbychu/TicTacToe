@@ -24,8 +24,9 @@ public class EventListener implements GLEventListener {
     	gl.glClearColor(0,0,0,1);
     	gl.glClear(gl.GL_COLOR_BUFFER_BIT);
         
-        Graphics.drawSquare(100, 150, 10);
-        Graphics.drawX(100, 150, 10);
+        Graphics.drawSquare(20, -40, 30);
+        //Graphics.drawX(100, 150, 10);
+        Graphics.drawO(20, -40, 30);
 	}
 
 	@Override

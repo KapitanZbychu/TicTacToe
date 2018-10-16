@@ -78,16 +78,16 @@ public class Graphics {
       
     }
 
-    public static void drawO(int r, int x, int y) {
-                
+    public static void drawO(int radius, int x, int y) {
         GL2 gl = EventListener.gl;
+        radius=radius/2;
         
         gl.glBegin( GL2.GL_LINE_LOOP );
  
         for (int i=0; i<360; i++)
         {
             double degInRad = Math.toRadians(i);
-            gl.glVertex2f((float)Math.cos(degInRad)*r, (float)Math.sin(degInRad)*r);
+            gl.glVertex2f((float)Math.cos(degInRad)*radius+x+radius, (float)Math.sin(degInRad)*radius-(radius-y));
         }
 
         gl.glEnd();
