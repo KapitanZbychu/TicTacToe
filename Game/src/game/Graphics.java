@@ -4,22 +4,37 @@ import com.jogamp.opengl.GL2;
 
 public class Graphics {
     
-    public static void drawSquare() {
+    public static void drawSquare(int d, int x, int y) {
       GL2 gl = EventListener.gl;
+      
       
       //Top
       gl.glBegin( GL2.GL_LINES );
-      gl.glVertex2f( -10,10 );
-      gl.glVertex2f( 10,10 );
+      gl.glVertex2f( x,y );
+      gl.glVertex2f( x+d,y );
       gl.glEnd();
       
       //Bottom
       gl.glBegin( GL2.GL_LINES );
-      gl.glVertex2f( -10,-10 );
-      gl.glVertex2f( 10,-10 );
+      gl.glVertex2f( x,y-d );
+      gl.glVertex2f( x+d, y-d );
+      gl.glEnd();
+      
+         //Left
+      gl.glBegin( GL2.GL_LINES );
+      gl.glVertex2f( x,y );
+      gl.glVertex2f( x, y-d );
+      gl.glEnd();
+      
+      //Right
+      gl.glBegin( GL2.GL_LINES );
+      gl.glVertex2f(x + d, y );
+      gl.glVertex2f(x+ d, y- d );
       gl.glEnd();
       
       gl.glFlush();
+      
+      
     }
     
     public static void drawExample() {
