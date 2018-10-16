@@ -33,10 +33,8 @@ public class EventListener implements GLEventListener {
     	GL2 gl = drawable.getGL().getGL2();
     	gl.glMatrixMode(gl.GL_PROJECTION);
     	gl.glLoadIdentity();
-    	gl.glOrtho(-320, 320, -180, 180, -1, 1);
+    	gl.glOrtho(-(Constants.window_width/2), Constants.window_width/2, -(Constants.window_height/2), Constants.window_height/2, -1, 1);
     	gl.glMatrixMode(gl.GL_MODELVIEW);
-   	 
-   	 
 	}
     
 }

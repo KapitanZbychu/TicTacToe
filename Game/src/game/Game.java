@@ -6,15 +6,15 @@ import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.util.FPSAnimator;
 
 public class Game {
-    private static GLWindow window = null;
-
+        private static GLWindow window = null;
+    
 	public static void init (){
     	GLProfile.initSingleton();
     	GLProfile profile = GLProfile.get(GLProfile.GL2);
     	GLCapabilities caps = new GLCapabilities(profile);
    	 
     	window = GLWindow.create(caps);
-    	window. setSize(640, 360);
+    	window. setSize(Constants.window_width, Constants.window_height);
     	window. setResizable(false);
     	window.addGLEventListener(new EventListener());
    	 
