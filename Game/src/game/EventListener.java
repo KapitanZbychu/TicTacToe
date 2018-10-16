@@ -27,6 +27,7 @@ public class EventListener implements GLEventListener {
         Graphics.drawSquare(20, -40, 30);
         //Graphics.drawX(100, 150, 10);
         Graphics.drawO(20, -40, 30);
+        Graphics.drawNet(50,10,10);
 	}
 
 	@Override

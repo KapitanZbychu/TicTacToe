@@ -77,6 +77,59 @@ public class Graphics {
       
       
     }
+    
+    public static void drawNet(int d, int x, int y) {
+        GL2 gl = EventListener.gl;
+        //
+        gl.glBegin( GL2.GL_LINES );
+        gl.glVertex2f( x+d/3,y );
+        gl.glVertex2f( x+d/3,y-d);
+        gl.glEnd();
+        
+        //
+        gl.glBegin( GL2.GL_LINES );
+        gl.glVertex2f( x+2*d/3,y );
+        gl.glVertex2f( x+2*d/3,y-d );
+        gl.glEnd();
+
+
+        gl.glBegin( GL2.GL_LINES );
+        gl.glVertex2f( x,y-d/3);
+        gl.glVertex2f( x+d,y-d/3 );
+        gl.glEnd();
+
+        gl.glBegin( GL2.GL_LINES );
+        gl.glVertex2f( x,y-2*d/3 );
+        gl.glVertex2f( x+d,y-2*d/3);
+        gl.glEnd();
+        
+        gl.glFlush();
+         
+        /*
+        gl.glBegin( GL2.GL_LINES );
+        gl.glVertex2f( x+d,y );
+        gl.glVertex2f( x+d,y-3*d);
+        gl.glEnd();
+        
+        //
+        gl.glBegin( GL2.GL_LINES );
+        gl.glVertex2f( x+2*d,y );
+        gl.glVertex2f( x+2*d,y-3*d );
+        gl.glEnd();
+
+
+        gl.glBegin( GL2.GL_LINES );
+        gl.glVertex2f( x,y-d);
+        gl.glVertex2f( x+3*d,y-d );
+        gl.glEnd();
+
+        gl.glBegin( GL2.GL_LINES );
+        gl.glVertex2f( x,y-2*d );
+        gl.glVertex2f( x+3*d,y-2*d);
+        gl.glEnd();
+        */
+      
+    }
 
     public static void drawO(int radius, int x, int y) {
         GL2 gl = EventListener.gl;
