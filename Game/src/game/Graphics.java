@@ -31,14 +31,14 @@ public class Graphics {
         	gl.glVertex2f(50,50);
         	gl.glVertex2f(-50,50);
     	//
-    	gl.glEnd();*/
+    	gl.glEnd();
         
         gl.glColor4f(1,1,255,1);
-      gl.glBegin( GL2.GL_QUADS );
-      gl.glVertex2f(20,20);
-      gl.glVertex2f(40,20);
-      gl.glVertex2f(40,80);
-      gl.glVertex2f(20,80);
-      gl.glEnd();
+        gl.glBegin( GL2.GL_QUADS );
+        gl.glVertex2f(20,20);
+        gl.glVertex2f(40,20);
+        gl.glVertex2f(40,80);
+        gl.glVertex2f(20,80);
+        gl.glEnd();*/
     }
 }
