@@ -4,6 +4,7 @@ import com.jogamp.newt.opengl.GLWindow;
 import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLProfile;
 import com.jogamp.opengl.util.FPSAnimator;
+import input.MouseInput;
 
 public class Game {
         private static GLWindow window = null;
@@ -17,6 +18,7 @@ public class Game {
     	window. setSize(Constants.window_width, Constants.window_height);
     	window. setResizable(false);
     	window.addGLEventListener(new EventListener());
+        window.addMouseListener(new MouseInput());
    	 
     	FPSAnimator animator = new FPSAnimator(window, 60);
     	animator.start();
