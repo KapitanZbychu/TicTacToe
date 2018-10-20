@@ -6,7 +6,6 @@ import com.jogamp.opengl.GLEventListener;
 import static com.jogamp.opengl.GLProfile.GL2;
 
 public class EventListener implements GLEventListener {
-        public static int test=1;
         public static GL2 gl = null;
         
 	@Override
@@ -25,7 +24,7 @@ public class EventListener implements GLEventListener {
     	gl.glClear(gl.GL_COLOR_BUFFER_BIT);
         
         
-        if (test == 1){
+        if (Gra.test == 1){
             Graphics.drawSquare(20, -40, 30);
             Graphics.drawX(20, -190, 190);
             Graphics.drawO(20, -40, 30);

@@ -2,14 +2,14 @@ package input;
 
 import com.jogamp.newt.event.MouseEvent;
 import com.jogamp.newt.event.MouseListener;
-import game.EventListener;
+import game.Gra;
 
 public class MouseInput implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
             System.out.println(e.getX() + " / " + e.getY());
-            EventListener.test=2;
+            Gra.test=2;
     }
 
     @Override
