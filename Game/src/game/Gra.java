@@ -16,6 +16,18 @@ public class Gra {
     public static int pole8=0;
     public static int pole9=0;
     
+    public static int znak=1;
+    
+    public static int wartoscZnaku() {
+        if (znak == 1) {
+            znak = 2;
+        } else {
+            znak = 1;
+        };
+        
+        return znak;
+    }
+    
     public static void Rysuj() {
         if (pole1 == 1){
             Graphics.drawX(szerokosc, x1, y1);
