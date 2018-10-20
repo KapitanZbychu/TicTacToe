@@ -9,7 +9,7 @@ public class MouseInput implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
             System.out.println(e.getX() + " / " + e.getY());
-            Gra.pole1=1;
+            Gra.pole1++;
     }
 
     @Override
